@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="authentication">
+    <name>Authentication - EasyLDAP</name>
+    <author>Alberto Ingrao</author>
+    <creationDate>Jul 10, 2015</creationDate>
+    <copyright>(c)Alberto Ingrao. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>esseeemme@gmail.com</authorEmail>
+    <authorUrl>google.com/+AlbertoIngrao</authorUrl>
+    <version>1.0</version>
+    <description>Plugin for OpenLDAP and FreeIPA authentication</description>
+    <files>
+        <filename plugin="easyldap">easyldap.php</filename>
+    </files>
+    <config>
+  <fields name="params">
+     <fieldset name="basic" >
+     			<field name="server_type" type="radio" default="0" label="Server Type" description="Server Type">
+ 	 				<option value="0">OpenLDAP</option>
+  					<option value="1">FreeIPA</option>
+				</field>
+				<field name="host" type="text"
+					default=""
+					description="LDAP server"
+					label="Host"
+					size="20"
+				/>
+				<field name="port" type="text"
+					default=""
+					description="LDAP port"
+					label="Port"
+					size="20"
+				/>
+				<field name="basedn" type="text"
+					default=""
+					description="Base DN"
+					label="Base DN"
+					size="20"
+				/>
+				<field name="dn" type="text"
+					default=""
+					description="DN"
+					label="DN"
+					size="20"
+				/>
+    </fieldset>
+  </fields>
+</config>
+</extension>
