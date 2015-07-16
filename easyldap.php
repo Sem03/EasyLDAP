@@ -72,6 +72,10 @@ class plgAuthenticationEasyLDAP extends JPlugin
 			
 			$email=$entries[0]["mail"][0];
 			
+			if (!isset($email) || $email=="" || $email==NULL){
+	  			$email="example@example.com";
+	  		}
+	  		
 			jimport('joomla.user.helper');
 			 $udata = array(
 				  "name"=>$full_name,
